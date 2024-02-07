@@ -23,24 +23,25 @@ const appRouter=createBrowserRouter([
       path:"/browser",
       element:<Browser/>
     }
-  ],
-  errorElement:<Error/>
-    
-  }
+    ],errorElement:<Error/>
+  
+  },
+  
+
+  {
+    path:"/error",
+    element:<Error/>
+  },
+  
 ])
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={appStore}>
     <RouterProvider router={appRouter}/>
     </Provider>
-  </React.StrictMode>
+  //</React.StrictMode>
 );
 
 
 reportWebVitals();
-// children:[{
-      
-      
 
-// }],
-// errorElement:<Error/>
