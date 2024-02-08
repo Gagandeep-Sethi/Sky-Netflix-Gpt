@@ -6,6 +6,6 @@ export const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNDI2YTZiMjU0MDE5MmJiMTIxNDgxOTc3NWE3ZDhhNyIsInN1YiI6IjY1YzNjYmM3OGUyZTAwMDE4M2E2OTEyZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.P8RVBflVJKCMpro05NJhhsL071hhIFFU6JQ1aKRFRAE'
+      Authorization: process.env.REACT_APP_tmdbid
     }
   };
