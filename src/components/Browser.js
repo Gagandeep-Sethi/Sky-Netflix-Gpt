@@ -1,26 +1,32 @@
 import React from 'react'
 import {  useSelector } from 'react-redux'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
-import FeaturingMovie from './FeaturingMovie'
-import FeaturingMovieInfo from './FeaturingMovieInfo'
+import MainContainer from './MainContainer'
+import SecondaryContainer from './SecondaryContainer'
+import usePopularMovies from '../hooks/usePopularMovies'
+import useTopRatedMovies from '../hooks/useTopRatedMovies'
+import useUpcomingMovies from '../useUpcomingMovies'
 
 
 const Browser = () => {
-  //const dispatch=useDispatch()
   const movieslicer=useSelector((appStore)=>appStore.movie.nowPlaying)
   
 
   
   useNowPlayingMovies()
+  usePopularMovies()
+  useTopRatedMovies()
+  useUpcomingMovies()
   
   if(!movieslicer)return null
-  console.log(movieslicer[0])
 
   return (
     <div>
       
-      <FeaturingMovieInfo movie={movieslicer[0]}/>
-      <FeaturingMovie />
+      
+      <MainContainer/>
+      <SecondaryContainer/>
+      
       
       </div>
   )
