@@ -8,16 +8,19 @@ const SecondaryContainer = () => {
 
     if(movies===null)return null
     
+    
 
 
 
 
   return (
-    <div className='bg-black'>
-        <MoviesList className="ml-96"  movie={movies?.nowPlaying} name="Now Playing"/>
+    <div className='bg-black '>
+      <div className='-mt-36 '> 
+        <MoviesList className=" "  movie={movies?.nowPlaying} name="Now Playing"/>
         <MoviesList movie={movies?.popular} name="Popular"/>
         <MoviesList movie={movies?.topRated} name="Top Rated"/>
         <MoviesList movie={movies?.upcoming} name="Upcoming"/>
+        </div>
     </div>
   )
 }

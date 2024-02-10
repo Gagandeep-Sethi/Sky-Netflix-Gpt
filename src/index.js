@@ -8,6 +8,8 @@ import Browser from './components/Browser';
 import Error from './components/Error';
 import { Provider } from 'react-redux';
 import appStore from './utils/appStore';
+import MovieDetails from './components/WatchMovie';
+import WatchMovie from './components/WatchMovie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,6 +24,14 @@ const appRouter=createBrowserRouter([
     {
       path:"/browser",
       element:<Browser/>
+    },
+    {
+      path:"/details",
+      element:<MovieDetails/>
+    },
+    {
+      path:"/watch/:movieId",
+      element:<WatchMovie/>
     }
     ],errorElement:<Error/>
   
