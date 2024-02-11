@@ -22,10 +22,10 @@ const Browser = () => {
 
   return (
     <div>
-      
-      
       <MainContainer/>
       <SecondaryContainer/>
+      
+      
       
       
       </div>

@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import appStore from './utils/appStore';
 import MovieDetails from './components/WatchMovie';
 import WatchMovie from './components/WatchMovie';
+import GPTSearch from './components/GPTSearch';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -32,7 +33,12 @@ const appRouter=createBrowserRouter([
     {
       path:"/watch/:movieId",
       element:<WatchMovie/>
-    }
+    },
+    {
+      path:"/gptsearch",
+      element:<GPTSearch/>
+    },
+
     ],errorElement:<Error/>
   
   },
