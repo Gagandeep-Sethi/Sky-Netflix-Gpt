@@ -5,6 +5,7 @@ import { options } from '../utils/constants'
 
 const usePopularMovies = () => {
     const dispatch=useDispatch()
+    
     const getNowPlayingMovies=async()=>{
 
     

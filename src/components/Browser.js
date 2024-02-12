@@ -10,6 +10,7 @@ import useUpcomingMovies from '../useUpcomingMovies'
 
 const Browser = () => {
   const movieslicer=useSelector((appStore)=>appStore.movie.nowPlaying)
+  //const observer=new IntersectionObserver()
   
 
   
@@ -34,10 +35,3 @@ const Browser = () => {
 
 export default Browser
 
-//<featuring movie/>
-//   -trailer playing in background
-//   -geaturin movie details
-//<movie list>
-//   -now playing
-//   -popular movies
-//   -
