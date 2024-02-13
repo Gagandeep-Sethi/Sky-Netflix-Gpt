@@ -16,7 +16,6 @@ const useTrailerOfFeaturingMovie = (movieId) => {
 
         dispatch(addFeaturingMovie(trailer[0]))
     }catch(e){
-        console.log("internet not connected")
 
     }
     }

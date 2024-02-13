@@ -1,10 +1,10 @@
 import React, {  useRef, useState } from 'react'
-import { Netflix_BgImage } from '../utils/constants'
 import { getValidation } from '../utils/validation'
 import {  createUserWithEmailAndPassword ,signInWithEmailAndPassword, updateProfile,  } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
+import bg_netflix from '../assets/images/bg_netflix.jpeg'
 
 const Login = () => {
   const[signinForm ,setSigninForm]=useState(true)
@@ -14,7 +14,6 @@ const Login = () => {
   const name=useRef(null)
   const dispatch=useDispatch()
 
-  console.log(name)
 
   
   const handleClick=()=>{
@@ -55,15 +54,14 @@ const Login = () => {
       signInWithEmailAndPassword(auth,email.current.value, password.current.value)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
-    console.log(user)
+    //const user = userCredential.user;
     // ...
   })
   .catch((error) => {
     //const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorMessage)
-    console.log(error)
+    
   });
     }
    }
@@ -94,7 +92,7 @@ const Login = () => {
             </form>
         </div>
         <div className=''>
-            <img src={Netflix_BgImage} alt='background'/>
+            <img src={bg_netflix} alt='background'/>
         </div>
 
         

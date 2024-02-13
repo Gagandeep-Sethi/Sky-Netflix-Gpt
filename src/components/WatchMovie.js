@@ -14,7 +14,6 @@ const WatchMovie = () => {
     getVideo()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  console.log(details)
   const getVideo = async () => {
     const data = await fetch('https://api.themoviedb.org/3/movie/' + movieId + '/videos?language=en-US', options)
     const json = await data.json()

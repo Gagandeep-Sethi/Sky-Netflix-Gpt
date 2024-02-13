@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
-import { Netflix_Logo, User_logo } from '../utils/constants'
+import netflix_logo from "../assets/images/Netflix_Logo_PMS.png"
+import user_logo from "../assets/images/user_logo.jpeg"
+
+
 import {   onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from '../utils/firebase';
  
@@ -45,13 +48,13 @@ signOut(auth).then(() => {
   
   return (
     <div className=' absolute bg-gradient-to-b from-black flex justify-between  z-20  '>
-    <img src={Netflix_Logo} alt='logo' className='block    w-[14%] ml-36  '/>
+    <img src={netflix_logo} alt='logo' className='block    w-[14%] ml-36  '/>
     
     {signedin===null?null: <div className=' mr-10 flex '>
     <Link className='self-center' to="/browser"><p className='text-white px-4 py-2  rounded-3xl  font-bold mr-6 transition ease-out duration-400 hover:bg-white hover:text-black'>Home </p></Link>
     <Link className='self-center' to="/gptsearch"><p className='self-center text-white px-4 py-2  rounded-3xl  font-bold mr-6 transition ease-out duration-400 hover:bg-white hover:text-black' >GPT Search</p></Link>
       <div>
-      <img className='w-14   mt-6 ml-6 block  ' src={User_logo} alt="user"/>
+      <img className='w-14   mt-6 ml-6 block  ' src={user_logo} alt="user"/>
       <button onClick={handleClick} className='text-red-600 inline'>Signout({signedin.name})</button>
       </div>
     </div>}
