@@ -15,6 +15,7 @@ const WatchMovie = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   const getVideo = async () => {
+    try{
     const data = await fetch('https://api.themoviedb.org/3/movie/' + movieId + '/videos?language=en-US', options)
     const json = await data.json()
     if(json.results.length){
@@ -37,8 +38,13 @@ const WatchMovie = () => {
     
 
 
-  }
-  if (!details) return null
+  }catch(e){
+    console.log(e.message)
+  }}
+
+  if (!details){
+    
+    return <h1 className='text-3xl font-bold text-green-950 pt-80'>If the content is not loaded please use Vpn</h1>} 
   const { original_title, tagline, overview, genres, vote_average, status } = details
 
 

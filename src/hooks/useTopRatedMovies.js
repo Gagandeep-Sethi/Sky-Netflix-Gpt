@@ -1,9 +1,10 @@
 import  { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addTopRatedMovies } from '../utils/moviesSlice'
 import { options } from '../utils/constants'
 
 const useTopRatedMovies = () => {
+  const nowplayingMovies=useSelector((appStore)=>appStore?.movie?.topRated)
     const dispatch=useDispatch()
     const getNowPlayingMovies=async()=>{
 
@@ -19,7 +20,7 @@ const useTopRatedMovies = () => {
     
       }
       useEffect(()=>{
-        getNowPlayingMovies()
+        !nowplayingMovies && getNowPlayingMovies()
     
       // eslint-disable-next-line react-hooks/exhaustive-deps
       },[])

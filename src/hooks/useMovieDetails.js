@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { options } from '../utils/constants'
 
 const useMovieDetails = (movieId) => {
+     
     const dispatch=useDispatch()
     const getMovieDetails=async()=>{
         try{

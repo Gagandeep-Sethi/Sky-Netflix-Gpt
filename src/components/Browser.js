@@ -18,9 +18,10 @@ const Browser = () => {
   usePopularMovies()
   useTopRatedMovies()
   useUpcomingMovies()
+  console.log("dd")
   
   if(!movieslicer)return null
-
+  
   return (
     <div>
       <MainContainer/>

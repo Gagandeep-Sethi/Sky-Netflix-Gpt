@@ -12,9 +12,10 @@ const FeaturingMovie = () => {
     
     
     
-    
     useTrailerOfFeaturingMovie(movieslicer[0]?.id)
-    if(!video)return null
+    if(!video){
+      
+      return <h1 className='text-3xl font-bold'>If the content is not loaded please use Vpn</h1>}
     
    
 
