@@ -30,13 +30,13 @@ const GPTSearch = () => {
   return (
     <div className='w-screen'>
         
-        <img className="fixed"src={bg_netflix} alt='background'/>
+        <img className="fixed w-full h-full object-cover"src={bg_netflix} alt='background'/>
             <form onSubmit={(e)=>e.preventDefault()}className='absolute w-[75%]  top-[35%] left-[20%] '>
             <input ref={search} placeholder='What you wanna watch tonight' className='w-1/2 h-11 px-4 py-2 rounded-l-xl border-2 border-red-700' />
 
                 <button onClick={handleSearch} className="bg-red-700 h-11 px-4 py-2 text-white rounded-r-xl border-2 border-white">Search</button>
             </form>
-            {results?<div className='pt-[24%]'><MoviesList movie={results} name={search.current.value}/></div>:null}
+            {results?<div className='pt-[50%] xl:pt-[24%]'><MoviesList movie={results} name={search.current.value}/></div>:null}
             
             
             

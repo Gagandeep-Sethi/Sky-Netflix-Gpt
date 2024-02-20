@@ -50,12 +50,12 @@ const WatchMovie = () => {
 
 
   return (
-    <div className='bg-black'>
-      <div className='pt-[10%]'>
+    <div className='bg-black h-screen'>
+      <div className='pt-[30%] lg:pt-[20%] xl:pt-[10%] bg-black'>
         <div className='px-6 w-screen'>
           <iframe className=' aspect-video w-full    rounded-3xl ' src={"https://www.youtube.com/embed/" + videoKey + "?&showinfo=0&modestbranding=1&rel=0"} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " allowFullScreen></iframe>
         </div>
-        <div className='bg-gray-300 rounded-lg  mx-6 mt-4 px-4 py-2'>
+        <div className='bg-gray-300 rounded-lg  mx-6  px-4 py-2 mt-[10%] xl:mt-8'>
           <p className='font-bold text-3xl  mb-4'>{original_title} <span className={'text-lg font-semibold ' + (vote_average > 5 && "text-green-600")} > ({vote_average}/10 ⭐️)</span></p>
           <p className='font-bold text-xl'>About -<span className='font-normal text-lg'>{tagline}</span></p>
           <p className='font-bold text-xl'>Genre-<span className='font-normal text-lg'>({genres.map((r) => r?.name).join(",")})</span></p>

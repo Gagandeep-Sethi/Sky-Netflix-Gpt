@@ -18,12 +18,12 @@ const Browser = () => {
   usePopularMovies()
   useTopRatedMovies()
   useUpcomingMovies()
-  console.log("dd")
+  //console.log("dd")
   
   if(!movieslicer)return null
   
   return (
-    <div>
+    <div className=" h-screen bg-black" >
       <MainContainer/>
       <SecondaryContainer/>
       
