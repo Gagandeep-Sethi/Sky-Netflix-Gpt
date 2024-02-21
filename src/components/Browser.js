@@ -19,7 +19,7 @@ const Browser = () => {
   useTopRatedMovies()
   useUpcomingMovies()
   
-  if(!movieslicer)return <h1 className='absolute text-3xl text-black mt-[20%] ml-[25%]'>Please use Vpn if content is not loaded</h1>
+  if(!movieslicer)return <h1 className='absolute text-3xl text-black mt-[20%] ml-[25%]'>Please use Vpn if content is not loaded and refresh the Page</h1>
   
   return (
     <div className=" h-screen bg-black" >
