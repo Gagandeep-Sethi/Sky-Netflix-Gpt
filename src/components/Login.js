@@ -70,7 +70,7 @@ const Login = () => {
   return (
     <div className='text-white  '>
         
-        <div className=' w-3/12   absolute left-[36.5%] top-40   '>
+        <div className='w-1/2 xl:w-3/12 left-[25%] h-1/2   absolute xl:left-[36.5%] top-[30%] xl:top-[25%] z-20   '>
           {/* this is also we can prevent or add this in submit button  */}
             <form onSubmit={(e)=>e.preventDefault()} className='bg-black bg-opacity-75 w-full p-8    rounded-lg ' >
                 <h1 className=' text-3xl font-bold'>{signinForm?"Sign In":"Sign Up"}</h1>
@@ -91,8 +91,8 @@ const Login = () => {
                 
             </form>
         </div>
-        <div className=''>
-            <img src={bg_netflix} alt='background'/>
+        <div className='w-screen'>
+            <img className='fixed w-full h-full object-cover'src={bg_netflix} alt='background'/>
         </div>
 
         
