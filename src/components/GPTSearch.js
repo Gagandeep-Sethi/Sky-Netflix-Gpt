@@ -36,7 +36,7 @@ const GPTSearch = () => {
 
                 <button onClick={handleSearch} className="bg-red-700 h-11 px-4 py-2 text-white rounded-r-xl border-2 border-white">Search</button>
             </form>
-            {results?<div className='pt-[50%] xl:pt-[24%]'><MoviesList movie={results} name={search.current.value}/></div>:null}
+            {results?<div className='pt-[80%]  xl:pt-[24%]'><MoviesList movie={results} name={search.current.value}/></div>:null}
             
             
             
