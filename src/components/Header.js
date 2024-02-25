@@ -49,7 +49,7 @@ signOut(auth).then(() => {
   return (
     <div className=' absolute bg-gradient-to-b from-black flex justify-between  z-20 pt-[3%] xl:pt-[0%]  '>
       <div className='self-center'>
-    <Link className='block w-[20%]      xl:w-[14%] ml-[10%] ' to="/browser"><img src={netflix_logo} alt='logo' className='w-full h-full object-cover '/></Link>
+    <Link className='block w-[20%]      xl:w-[14%] ml-[10%]  'to={signedin?"/browser":"/"} ><img src={netflix_logo} alt='logo' className='w-full h-full object-cover '/></Link>
     </div>
     {signedin===null?null: <div className=' mr-10 flex '>
     
@@ -66,3 +66,4 @@ signOut(auth).then(() => {
 
 export default Header
 
+ 
